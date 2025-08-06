@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D5E1EF;
+
+    font-family: "Outfit", sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    color: #68778D;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    padding: 16px;
+    border-radius: 20px;
+
+    background-color: #FFFFFF;
+    box-shadow: 0 25px 25px 0 rgba(0, 0, 0, 0.05);
+}
+
+.card__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0.2px;
+    color: #1F314F;
+
+}
+
+.card__image-wrapper {
+    border-radius: 10px;
+    width: 288px;
+    height: 288px;
+
+    background-color: #2C7DFA;
+    position: relative;
+    overflow: hidden;
+}
+
+.card__image-wrapper>* {
+    z-index: 1;
+}
+
+.card__image{
+    width: 160px;
+    height: 160px;
+}
+.card__image-wrapper::before,
+.card__image-wrapper::after {
+    content: "";
+    position: absolute;
+    background-color: #3685FF;
+    border-radius: 50%;
+}
+
+.card__image-wrapper::before {
+    width: 328px;
+    height: 328px;
+    left: -40%;
+    top: -65%;
+}
+
+.card__image-wrapper::after {
+    width: 270px;
+    height: 270px;
+    right: -40%;
+    bottom: -65%;
+    z-index: 0;
+}
+
+.card__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card__content {
+    margin-top: 24px;
+    padding: 0 16px;
+}
+
+
+.card__title {
+    margin-bottom: 16px;
+    -webkit-line-clamp: 2;
+}
+
+.card__descriprion {
+    margin: 0;
+    -webkit-line-clamp: 3;
+}
+
+/* Обрезка текста троеточием */
+.truncate-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
